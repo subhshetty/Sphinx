@@ -1,0 +1,33 @@
+pip install Sphinx
+sphinx-quickstart
+cd source/
+vi OpenNms.rst
+- in this add ur specified format documentation a sample file attached for reference
+vi index.rst
+- add the name of the file, for eg. opennms
+eg: Welcome to opennms's documentation!
+
+    ===================================
+
+
+
+    .. toctree::
+
+      :maxdepth: 2
+   
+   :caption: Contents:
+
+
+
+      OpenNms
+make html
+then check the html file created in build/html/
+come back to the home folder and create a folder for example sample
+in sample folder below commands
+- git init
+- git add .
+- git commit -m "opennms"
+- git remote add origin http://and-ur-link
+- git pull -u origin master
+- git remote -v
+- git push -u origin master
