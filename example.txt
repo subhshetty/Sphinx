@@ -61,7 +61,7 @@ Used to create network topology Installated with below steps on ubuntu server
 * Once Started access the web application through the following link:
 
 +--------------------------------------------------+
-| http://<ip-or-fqdn-of-your-server>:8980/opennms                             |
+| http://<ip-or-fqdn-of-your-server>:8980/opennms  |
 +--------------------------------------------------+
 
 The default login user is admin and the password is initialized to admin.
