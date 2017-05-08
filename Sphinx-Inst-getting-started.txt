@@ -1,0 +1,34 @@
+Sphinx
+Sphinx which is called Document Generator, this tool allows developers to write documentation in plain text for easy output generation. It takes bunch of source files in a plain text and it generates a things in HTML. Here, it takes plain text files as a reStructuredText format and outputs as HTML file.
+Requirements:
+python 2.6.1
+Installation:
+.	pip install Sphinx
+.	sphinx-quickstart
+This command will prompt you bunch of questions on how you want to setup your documentation and what extensions you want to enable.Accept the defaults for everything except the questions
+Separate source and build directories (y/n) [n]: y autodoc extension (y/n) [n]: y
+It creates a source directory with conf.py where we configure the file by uncommenting few lines as follows:
+import os,
+import sys,
+sys.path.insert(0, os.path.abspath(...))
+and a master document, index.rst which generates the welcome page and contains the root of the .table of contents tree. (toctree), which connects the multiple files into a single hierarchy.
+Lets see what it generates..
+Makefile,
+build,
+make.bat,
+source
+_static,
+_templates,
+conf.py,
+index.rst
+Run this command
+.	make html
+This will create output in the directory build/html, open the build/html/index.html
+Getting Started:
+Now, we installed sphinx, take a look inside index.rst file where we can add some information and some additional files under toctree declaration.The toctree is the central element to gather all documents into the documentation, if any other files are present in source directory but not listed under toctree directive those files would not be generated with the documentation at build time. If we want to add a new file to documentation, create a file under source directory with the extension .rst, It needs to be listed in toctree directory by giving one blank line after maxdepth option and three blank spaces which seperates the file name from left margin. Now, we added the file in index.rst file, save it and come out of source directory run a command as follows: * make html
+It shows the build finished, the HTML pages are in build/html
+Go to build/html you can see the output file index.html.
+This is how we add the different files under toctree.
+References:
+.	http://www.sphinx-doc.org/en/stable/tutorial.html
+.	http://www.sphinx-doc.org/en/stable/rest.html#rst-primer
